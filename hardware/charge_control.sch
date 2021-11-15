@@ -1,0 +1,173 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Charge control"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Q_PMOS_GDS Q?
+U 1 1 61A62C30
+P 4050 2950
+F 0 "Q?" V 4392 2950 50  0000 C CNN
+F 1 "IRF9Z34N" V 4301 2950 50  0000 C CNN
+F 2 "" H 4250 3050 50  0001 C CNN
+F 3 "~" H 4050 2950 50  0001 C CNN
+	1    4050 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61A631EA
+P 4400 3100
+F 0 "R?" H 4470 3146 50  0000 L CNN
+F 1 "R" H 4470 3055 50  0000 L CNN
+F 2 "" V 4330 3100 50  0001 C CNN
+F 3 "~" H 4400 3100 50  0001 C CNN
+	1    4400 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener D?
+U 1 1 61A63838
+P 4650 3100
+F 0 "D?" V 4604 3179 50  0000 L CNN
+F 1 "D_Zener" V 4695 3179 50  0000 L CNN
+F 2 "" H 4650 3100 50  0001 C CNN
+F 3 "~" H 4650 3100 50  0001 C CNN
+	1    4650 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61A63D29
+P 4050 3450
+F 0 "R?" H 4120 3496 50  0000 L CNN
+F 1 "R" H 4120 3405 50  0000 L CNN
+F 2 "" V 3980 3450 50  0001 C CNN
+F 3 "~" H 4050 3450 50  0001 C CNN
+	1    4050 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 61A6409A
+P 4050 3750
+F 0 "D?" V 4096 3671 50  0000 R CNN
+F 1 "D" V 4005 3671 50  0000 R CNN
+F 2 "" H 4050 3750 50  0001 C CNN
+F 3 "~" H 4050 3750 50  0001 C CNN
+	1    4050 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NPN_CEB Q?
+U 1 1 61A64870
+P 3950 4100
+F 0 "Q?" H 4141 4146 50  0000 L CNN
+F 1 "Q_NPN_CEB" H 4141 4055 50  0000 L CNN
+F 2 "" H 4150 4200 50  0001 C CNN
+F 3 "~" H 3950 4100 50  0001 C CNN
+	1    3950 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61A64E61
+P 3600 4100
+F 0 "R?" V 3393 4100 50  0000 C CNN
+F 1 "R" V 3484 4100 50  0000 C CNN
+F 2 "" V 3530 4100 50  0001 C CNN
+F 3 "~" H 3600 4100 50  0001 C CNN
+	1    3600 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 61A657B1
+P 3050 4100
+F 0 "J?" H 3158 4281 50  0000 C CNN
+F 1 "Charge" H 3158 4190 50  0000 C CNN
+F 2 "" H 3050 4100 50  0001 C CNN
+F 3 "~" H 3050 4100 50  0001 C CNN
+	1    3050 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61A65BBD
+P 4050 4400
+F 0 "#PWR?" H 4050 4150 50  0001 C CNN
+F 1 "GND" H 4055 4227 50  0001 C CNN
+F 2 "" H 4050 4400 50  0001 C CNN
+F 3 "" H 4050 4400 50  0001 C CNN
+	1    4050 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4100 3250 4100
+Wire Wire Line
+	4050 4300 4050 4350
+Wire Wire Line
+	4050 4350 3250 4350
+Wire Wire Line
+	3250 4350 3250 4200
+Connection ~ 4050 4350
+Wire Wire Line
+	4050 4350 4050 4400
+Wire Wire Line
+	4400 3250 4650 3250
+Wire Wire Line
+	4400 3250 4050 3250
+Wire Wire Line
+	4050 3150 4050 3250
+Connection ~ 4400 3250
+Connection ~ 4050 3250
+Wire Wire Line
+	4050 3250 4050 3300
+Wire Wire Line
+	4250 2850 4400 2850
+Wire Wire Line
+	4650 2850 4650 2950
+Wire Wire Line
+	4400 2950 4400 2850
+Connection ~ 4400 2850
+Wire Wire Line
+	4400 2850 4650 2850
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 61A6759A
+P 3050 2850
+F 0 "J?" H 3158 3031 50  0000 C CNN
+F 1 "Battery" H 3158 2940 50  0000 C CNN
+F 2 "" H 3050 2850 50  0001 C CNN
+F 3 "~" H 3050 2850 50  0001 C CNN
+	1    3050 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2850 3850 2850
+$Comp
+L power:GND #PWR?
+U 1 1 61A67F09
+P 3250 3000
+F 0 "#PWR?" H 3250 2750 50  0001 C CNN
+F 1 "GND" H 3255 2827 50  0001 C CNN
+F 2 "" H 3250 3000 50  0001 C CNN
+F 3 "" H 3250 3000 50  0001 C CNN
+	1    3250 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2950 3250 3000
+Text Notes 2650 4750 0    50   ~ 0
+Charge signal\nH = Charge\nL = stop charging \n
+$EndSCHEMATC
